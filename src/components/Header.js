@@ -1,32 +1,60 @@
-import React from 'react';
-import logo from '../assets/logo.svg'
-import { Link } from 'react-scroll';
+import React, { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import LanguageSelector from './language-selector';
-
-
-
+import { PASSWORD_ROUTES } from './config';
 
 const Header = () => {
-  const {t} = useTranslation();
-  return <header className='py-8 '> {/*fixed top-0 w-full bg-primary/20 backdrop-blur-lg*/}
-    <div className='container mx-auto relative xs:center'>
-      <div className='flex justify-between items-center '>
-        {/* logo */}
-        <a className="text-gradient" href="/">PORTFOLIO</a>
-        {/* button */}
-        <div className="flex">
-          <a className=' btn btn-lg p-4' href="https://www.canva.com/design/DAGey6y9QA0/uoyVyzhv4ZsL4DOF2KdSZw/view?utm_content=DAGey6y9QA0&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=hf5fbdb71f5/">
-          {t("cv")}</a>
-        </div>
-        <LanguageSelector />
-      </div>
-      
-    </div>
+  const { t } = useTranslation();
 
-    
-       
-  </header>;
+  const [showPasswordInput, setShowPasswordInput] = useState(false);
+  const [password, setPassword] = useState('');
+  const [error, setError] = useState('');
+
+  const handleContinueClick = () => {
+    setShowPasswordInput(true);
+    setError('');
+  };
+
+  const handleSubmit = () => {
+    const destination = PASSWORD_ROUTES[password];
+    if (destination) {
+      window.location.href = destination;
+    } else {
+      setError('❌');
+    }
+  };
+
+  return (
+    <header className='py-8'>
+      <div className='container mx-auto relative xs:center'>
+        <div className='flex justify-between items-center'>
+          <a className="text-gradient" href="/">PORTFOLIO</a>
+          <div className="flex item-center">
+            <button className="btn btn-lg ml-10 p-2" onClick={handleContinueClick}>
+              {t("cv")}
+            </button>
+          </div>
+          <LanguageSelector />
+        </div>
+        {showPasswordInput && (
+          <div className="mt-4 flex flex-col items-center space-y-2 text-black ">
+            <input
+              type="password"
+              className="border rounded"
+              placeholder={t("pass")}
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+            />
+            {error && <p className="text-red-500 text-sm">{error}</p>}
+            <button className="btn btn-sm" onClick={handleSubmit}>
+              {t("submit")}
+            </button>
+            
+          </div>
+        )}
+      </div>
+    </header>
+  );
 };
 
 export default Header;

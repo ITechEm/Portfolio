@@ -34,7 +34,7 @@ const Services = () => {
     {
       name4: '',
       description4: '',
-      date: '10/2024 - Present'
+      date: '06/2023 - Present'
     }
   ]
   const services = [...services1, ...services2, ...services3, ...services4];
@@ -147,9 +147,6 @@ const Services = () => {
                     <div className='max-w-[410px]'>
                       <h4 className='text-[20px] tracking-wider font-primary font-semibold mb-6'>{name4}{t("wid4a")}</h4>
                       <p className='font-secondary leading-tight'>{description4} {t("wid4b")}</p>
-                      <p className='font-secondary leading-tight text-[16px]'>{text4} {t("wid4b2")}</p>
-                      
-
                     </div>
                     <div className='flex flex-col flex-1 items-end mt-2'>
                       <a className='text-gradient text-sm' >

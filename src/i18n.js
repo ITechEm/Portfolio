@@ -44,9 +44,8 @@ i18n.use(LanguageDetector).use(initReactI18next).init({
         wid3a:"Mentor at Skillbrain",
         wid3b:"I'm preparing people to become testers.",
         wid3b2:"Manual Testing, Bug Report, API Testing, Basic SQL etc...",
-        wid4a:"Driver at Greek Tasty",
-        wid4b:"To learn the German language faster and better, I start",
-        wid4b2:"this mini-job to improve my speaking skills.",
+        wid4a:"PFA",
+        wid4b:"Collaborating and delivering QA Manual services.",
         mlwtitle:"My Latest Works",
         mlwpar1:"With the desire to learn and understand more about web development and helping my students to understand better the testing field I modified a project for my needs. I created a new Front-End, APIs and DB.",
         mlwpar2:"Creating a website for a restaurant, where the customers can visualize the restaurant, the menu and order food.",
@@ -57,7 +56,9 @@ i18n.use(LanguageDetector).use(initReactI18next).init({
         gittitle2:"together",
         gitpar:"I'm looking forward to getting in touch and exploring the new opportunities in the QA field.",
         msg:"Send a message",
-        msg1:"If you found interest in my portfolio, don't hesitate to get in touch with me via email."
+        msg1:"If you found interest in my portfolio, don't hesitate to get in touch with me via email.",
+        pass:"Password",
+        submit:"Submit"
       },
     },
     de:{
@@ -98,9 +99,8 @@ i18n.use(LanguageDetector).use(initReactI18next).init({
         wid3a:"Mentor bei Skillbrain",
         wid3b:"Ich bereite Leute darauf vor, Tester zu werden.",
         wid3b2:"Manuelles Testen, Fehlerberichte, API-Tests, grundlegendes SQL usw.",
-        wid4a:"Fahrer bei Greek Tasty",
-        wid4b:"Um die deutsche Sprache schneller und besser zu lernen, beginne ich",
-        wid4b2:"diesen Minijob, um meine Sprechfähigkeiten zu verbessern.",
+        wid4a:"PFA",
+        wid4b:"Zusammenarbeit und Bereitstellung von QA-Handbuchdiensten.",
         mlwtitle:"Meine neuesten Arbeiten",
         mlwpar1:"Mit dem Wunsch, mehr über Webentwicklung zu lernen und zu verstehen und meinen Schülern zu helfen, das Testfeld besser zu verstehen, habe ich ein Projekt an meine Bedürfnisse angepasst. Ich habe ein neues Front-End, APIs und eine Datenbank erstellt.",
         mlwpar2:"Erstellen einer Website für ein Restaurant, auf der die Kunden das Restaurant und die Speisekarte visualisieren und Essen bestellen können.",
@@ -111,7 +111,9 @@ i18n.use(LanguageDetector).use(initReactI18next).init({
         gittitle2:"zusammenarbeiten",
         gitpar:"Ich freue mich darauf, Kontakt aufzunehmen und die neuen Möglichkeiten im QA-Bereich zu erkunden.",
         msg:"Senden Sie eine Nachricht",
-        msg1:"Wenn Sie Interesse an meinem Portfolio haben, zögern Sie nicht, mich per E-Mail zu kontaktieren."
+        msg1:"Wenn Sie Interesse an meinem Portfolio haben, zögern Sie nicht, mich per E-Mail zu kontaktieren.",
+        pass:"Passwort",
+        submit:"Einreichen"
       },
     },
   },
