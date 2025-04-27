@@ -41,7 +41,6 @@ const Services = () => {
   return <section id='services' className='py-10'>
     <div className='container mx-auto'>
       <div className='flex flex-col lg:flex-row'>
-        {/* text & img*/}
         <motion.div
           variants={fadeIn('right', 0.3)}
           initial='hidden'
@@ -50,7 +49,7 @@ const Services = () => {
           className='flex-1 bg-no-repeat mix-blend-lighten mb-12 lg:bg-services lg:bg-bottom lg:mb-0'  >
           <h2 className='h2 text-accent'>{t("widtitle")}</h2>
           <h3 className='h3 max-w-[455px] mb-16'>{t("widsubtitle")}</h3>
-          <p className='max-w-[500px] text-justify'>🔍 {t("widpar1")}
+          <p className='max-w-[500px] text-justify text-sm sm:text-base leading-relaxed'>🔍 {t("widpar1")}
                       <br/> 🌟{t("widpar2")}
                       <br/> 🌟{t("widpar3")}
                       <br/> 🌟{t("widpar4")}
@@ -65,22 +64,22 @@ const Services = () => {
           initial='hidden'
           whileInView={'show'}
           viewport={{ once: false, amount: 0.3 }}
-          className='flex-1'>
+          className='flex-1 space-y-8'>
           {/* service list */}
           <div>
             {
               services1.map((service, idx) => {
-                const { name1, description1, text1, name2, description2, name3, description3, text3, name4, description4, date } = service;
+                const { name1, description1, text1, date } = service;
                 return (
-                  <div key={idx} className='border-b border-white/20 h-[120px] mb-[36px] flex'>
-                    <div className='max-w-[410px]'>
-                      <h4 className='text-[20px] tracking-wider font-primary font-semibold mb-6'>{name1}{t("wid1a")}</h4>
-                      <p className='font-secondary leading-tight'>{description1} {t("wid1b")}</p>
-                      <p className='font-secondary leading-tight text-[16px]'>{text1} {t("wid1b2")}</p>
+                  <div key={idx} className='border-b border-white/20 pb-4 flex flex-col sm:flex-row justify-between gap-4'>
+                    <div className='flex-1'>
+                      <h4 className='text-[18px] sm:text-[20px] tracking-wider font-primary font-semibold mb-2'>{name1}{t("wid1a")}</h4>
+                      <p className='font-secondary text-sm sm:text-base leading-tight'>{description1} {t("wid1b")}</p>
+                      <p className='font-secondary text-sm sm:text-base leading-tight mt-1'>{text1} {t("wid1b2")}</p>
 
                     </div>
                     <div className='flex flex-col flex-1 items-end mt-2'>
-                      <a className='text-gradient text-sm' >
+                      <a className='text-sm text-right sm:text-end text-gradient mt-1 sm:mt-0' >
                       {date}
                       </a>
                     </div>
@@ -95,16 +94,16 @@ const Services = () => {
               services2.map((service, idx) => {
                 const { name2, description2, text2, date } = service;
                 return (
-                  <div key={idx} className='border-b border-white/20 h-[120px] mb-[36px] flex'>
-                    <div className='max-w-[410px]'>
-                      <h4 className='text-[20px] tracking-wider font-primary font-semibold mb-6'>{name2}{t("wid2a")}</h4>
-                      <p className='font-secondary leading-tight'>{description2} {t("wid2b")}</p>
-                      <p className='font-secondary leading-tight text-[16px]'>{text2} {t("wid2b2")}</p>
+                  <div key={idx} className='border-b border-white/20 pb-4 flex flex-col sm:flex-row justify-between gap-4'>
+                    <div className='flex-1'>
+                      <h4 className='text-[18px] sm:text-[20px] tracking-wider font-primary font-semibold mb-2'>{name2}{t("wid2a")}</h4>
+                      <p className='font-secondary text-sm sm:text-base leading-tight'>{description2} {t("wid2b")}</p>
+                      <p className='font-secondary text-sm sm:text-base leading-tight mt-1'>{text2} {t("wid2b2")}</p>
                       
 
                     </div>
                     <div className='flex flex-col flex-1 items-end mt-2'>
-                      <a className='text-gradient text-sm' >
+                      <a className='text-sm text-right sm:text-end text-gradient mt-1 sm:mt-0' >
                       {date}
                       </a>
                     </div>
@@ -119,16 +118,16 @@ const Services = () => {
               services3.map((service, idx) => {
                 const { name3, description3, text3, date } = service;
                 return (
-                  <div key={idx} className='border-b border-white/20 h-[120px] mb-[36px] flex'>
-                    <div className='max-w-[410px]'>
-                      <h4 className='text-[20px] tracking-wider font-primary font-semibold mb-6'>{name3}{t("wid3a")}</h4>
-                      <p className='font-secondary leading-tight '>{description3} {t("wid3b")}</p>
-                      <p className='font-secondary leading-tight text-[16px]'>{text3} {t("wid3b2")}</p>
+                  <div key={idx} className='border-b border-white/20 pb-4 flex flex-col sm:flex-row justify-between gap-4'>
+                    <div className='flex-1'>
+                      <h4 className='text-[18px] sm:text-[20px] tracking-wider font-primary font-semibold mb-2'>{name3}{t("wid3a")}</h4>
+                      <p className='font-secondary text-sm sm:text-base leading-tight'>{description3} {t("wid3b")}</p>
+                      <p className='font-secondary text-sm sm:text-base leading-tight mt-1'>{text3} {t("wid3b2")}</p>
                       
 
                     </div>
                     <div className='flex flex-col flex-1 items-end mt-2'>
-                      <a className='text-gradient text-sm' >
+                      <a className='text-sm text-right sm:text-end text-gradient mt-1 sm:mt-0' >
                       {date}
                       </a>
                     </div>
@@ -141,12 +140,12 @@ const Services = () => {
           <div>
             {
               services4.map((service, idx) => {
-                const { name4, description4, text4, date } = service;
+                const { name4, description4, date } = service;
                 return (
-                  <div key={idx} className='border-b border-white/20 h-[120px] mb-[36px] flex'>
-                    <div className='max-w-[410px]'>
-                      <h4 className='text-[20px] tracking-wider font-primary font-semibold mb-6'>{name4}{t("wid4a")}</h4>
-                      <p className='font-secondary leading-tight'>{description4} {t("wid4b")}</p>
+                  <div key={idx} className='border-b border-white/20 pb-4 flex flex-col sm:flex-row justify-between gap-4'>
+                    <div className='flex-1'>
+                      <h4 className='text-[18px] sm:text-[20px] tracking-wider font-primary font-semibold mb-2'>{name4}{t("wid4a")}</h4>
+                      <p className='font-secondary text-sm sm:text-base leading-tight'>{description4} {t("wid4b")}</p>
                     </div>
                     <div className='flex flex-col flex-1 items-end mt-2'>
                       <a className='text-gradient text-sm' >

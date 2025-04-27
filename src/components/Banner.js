@@ -55,7 +55,7 @@ const {t} = useTranslation();
             whileInView={'show'}
             viewport={{ once: false, amount: 0.7 }}
             className='flex max-w-max gap-x-6 items-center mb-20 mx-auto lg:mx-0'>
-            <a className='btn btn-lg p-4'>{t("contacticon")}</a>
+            <a className='btn btn-lg flex items-center justify-center text-center'>{t("contacticon")}</a>
             <a className="text-[30px]" href="https://www.linkedin.com/in/emanuel-tofan-723207162/">
               <FaLinkedin />
             </a>

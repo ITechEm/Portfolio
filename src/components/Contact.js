@@ -32,11 +32,12 @@ const Contact = () => {
             initial='hidden'
             whileInView={'show'}
             viewport={{ once: false, amount: 0.3 }}
-            className='flex-1 border rounded-2xl flex flex-col gap-y-10 pb-24 mt-4 p-20 items-center max-w-[471px]'>
+            className='flex-1 border rounded-2xl flex flex-col gap-y-6 sm:gap-y-10 pb-16 sm:pb-24 mt-8 p-6 sm:p-10 items-center max-w-[471px] mx-auto'>
             <p className='bg-transparent text-justify'>{t("msg1")}</p>
-            <a className='btn btn-lg  p-4' href="mailto:tofan.emanuel99@gmail.com">{t("msg")}</a>
+            <a className='btn btn-lg items-center py-2  text-center' href="mailto:tofan.emanuel99@gmail.com">{t("msg")}</a>
           </motion.div>
         </div>
+        <div className='mt-20'></div>
       </div>
     </section>);
 };

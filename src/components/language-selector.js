@@ -2,17 +2,13 @@ import React from "react";
 import { useTranslation } from "react-i18next";
 
 
-
-
 const languages = [
   { code: "en", name: "English"},
   { code: "de", name: "German"},
 ];
 
-
 const LanguageSelector = ({ currentlanguage }) => {
-const {i18n} = useTranslation();
-const {t} = useTranslation();
+const {i18n, t} = useTranslation();
 const onlanguageChange = (language) => {
     i18n.changeLanguage(language);
     } 
